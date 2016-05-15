@@ -46,8 +46,8 @@ gulp.task('watch', ['clean'], () => {
 
 gulp.task('watch-dev', ['build'], () => {
   // Watch all server files and build on changes
-  gulp.watch(files.server, ['server']);
-  gulp.watch(files.client, ['client']);
+  gulp.watch(files.server, ['client', 'server']);
+  gulp.watch(files.client, ['client', 'server']);
   gulp.watch(files.styles, ['styles']);
   gulp.watch(files.views, ['views']);
 });
@@ -126,6 +126,9 @@ gulp.task('styles', () => {
   return gulp.src(files.styles)
     .pipe(sourcemaps.init())
       .pipe(postcss(processors))
+        .on('error', (err) => {
+          console.error('CSS Error: ', err);
+        })
       .pipe(concat('main.css'))
     .pipe(sourcemaps.write('.'))
     .pipe(gulp.dest('dist/public/css'))
