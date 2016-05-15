@@ -1,0 +1,22 @@
+.icons {
+  font-size: 3em;
+  color: #3FA7D6;
+  padding-top:0.5em;
+}
+
+.icon-header {
+  padding-top:0.4em;
+}
+
+.container-shadow {
+  position: relative;
+  box-shadow: 0px 0px 20px #6D6D6D;
+}
+
+.subscribe-heading {
+  padding-top:1em;
+}
+
+.image-reel {
+  opacity: 0.8;
+}
