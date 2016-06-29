@@ -11,7 +11,10 @@
     "test": "",
     "console": "npm i && gulp clean && gulp && node repl.js",
     "logs": "pm2 logs",
-    "kill": "pm2 kill"
+    "jsdoc": "jsdoc src",
+    "seed": "knex seed:run",
+    "db-migrate": "knex migrate:latest",
+    "doc-server": "http-server ./out/ -p 9000"
   },
   "engines": {
     "node": "4.3.0"
@@ -24,6 +27,7 @@
     "express": "4.13.4",
     "font-awesome": "4.5.0",
     "history": "1.17.0",
+    "knex": "0.11.7",
     "lodash": "4.0.1",
     "morgan": "1.6.1",
     "mustache-express": "1.2.2",
@@ -42,6 +46,7 @@
     "babel-preset-stage-0": "6.5.0",
     "babelify": "7.2.0",
     "browserify": "13.0.0",
+    "chai": "3.5.0",
     "del": "2.2.0",
     "exorcist": "0.4.0",
     "gulp": "3.9.0",
@@ -52,6 +57,9 @@
     "gulp-react": "3.1.0",
     "gulp-sourcemaps": "1.6.0",
     "gulp-util": "3.0.7",
+    "http-server": "0.9.0",
+    "jsdoc": "3.4.0",
+    "mocha": "2.5.3",
     "postcss-for": "2.0.1",
     "postcss-short": "1.4.0",
     "postcss-simple-vars": "1.2.0",

@@ -30,22 +30,13 @@ node_modules
 # Optional REPL history
 .node_repl_history
 
-# Mac OSX
-.DS_Store
-
 # Intellij/Webstorm
 .idea
-
-# Local ENVs
-.env
 
 # Distribution/Build folder
 dist/
 
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
-
-# swap
-.swp
+.env
+.DS_Store
+*.swp
+out/*
